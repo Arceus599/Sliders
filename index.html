@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>Slider</title>
+</head>
+<style>
+    .carousel-slide {
+        height: 100%;
+        width: 100%;
+    }
+
+    .carousel-slide2 {
+        height: 100%;
+        width: 100%;
+    }
+
+    .carousel-slide1 {
+        height: 100%;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <section>
+        <img class="carousel-slide" src="pokemon.jpg" alt="Slide 1">
+
+        <img class="carousel-slide" src="pokemon1.jpg" alt="Slide 2">
+        <img class="carousel-slide" src="pokemon2.jpg" alt="Slide 3">
+
+        </section>
+        <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("carousel-slide");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) { myIndex = 1 }
+                x[myIndex - 1].style.display = "block";
+                setTimeout(carousel, 5000);
+
+            }
+
+        </script>
+</body>
+
+
+</html>
